@@ -138,7 +138,7 @@ resource "aws_instance" "app" {
   instance_type          = each.value.instance_type
   subnet_id              = aws_subnet.private[keys(var.vpc_config.private_subnets)[0]].id # Alterna entre subnets
   vpc_security_group_ids = [aws_security_group.ec2.id]
-  user_data              = file("${path.module}/../../${each.value.user_data_file}")
+  user_data              = file("${path.root}/${each.value.user_data_file}")
 
   tags = merge(var.tags, {
     Name = each.key
