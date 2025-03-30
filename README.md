@@ -12,7 +12,7 @@ No requirements.
 
 ```hcl
 module "leocinema" {
-  source = "./modules/network"
+  source = "git::https://github.com/leonardobgsilva/module-tf-aws-leocinema-infra.git"
 
   aws_region       = var.aws_region
   vpc_config       = var.vpc_config
