@@ -11,7 +11,7 @@ No requirements.
 ## main.tf
 
 ```hcl
-module "leocinema" {
+module "aws-leocinema" {
   source = "git::https://github.com/leonardobgsilva/module-tf-aws-leocinema-infra.git"
 
   aws_region       = var.aws_region
