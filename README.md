@@ -85,14 +85,14 @@ vpc_config = {
 
 instances_config = {
   "red-app" = {
-    instance_type  = "t3.micro",
+    instance_type  = "t2.micro",
     ami_id         = "ami-08a0d1e16fc3f61ea",
     port           = 80
     user_data_file = "user_data/red-app.sh"
     app_path       = "/red"
   },
   "green-app" = {
-    instance_type  = "t3.micro",
+    instance_type  = "t2.micro",
     ami_id         = "ami-08a0d1e16fc3f61ea",
     port           = 80
     user_data_file = "user_data/green-app.sh"
